@@ -46,3 +46,35 @@
     - 2. 작성한 코드의 부족한 부분을 분석 및 추가적으로 발생할 수 있는 예외 상황 분석
     - 3. 작성한 코드를 작은 함수 단위로 분해
     - 4. 함수의 작동이 원활한지에 대한 함수 단위 테스트 진행
+
+#### 프로젝트 구성
+    ```
+    src
+    ├─ main
+    │  └─ kotlin/racingcar
+    │     ├─ Application.kt
+    │     ├─ controller/
+    │     │  └─ RacingController.kt
+    │     ├─ model/
+    │     │  ├─ Car.kt
+    │     │  └─ Race.kt
+    │     ├─ util/
+    │     │  ├─ CarFactory.kt
+    │     │  ├─ ErrorMessage.kt 
+    │     │  └─ Validations.kt
+    │     ├─ view/
+    │     │  ├─ InputView.kt
+    │     │  ├─ OutputView.kt
+    │     │  ├─ ConsoleInputView.kt
+    │     │  └─ ConsoleOutputView.kt
+    └─ test
+        └─ kotlin/racingcar
+            ├─ ApplicationTest.kt
+            ├─ model/  
+            │    ├─ CarTest.kt
+            │    ├─ RaceTest.kt
+            └─ util/
+                ├─ CarFactoryTest.kt
+                └─ ValidationsTest.kt
+
+    ```
