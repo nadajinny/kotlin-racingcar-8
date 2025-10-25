@@ -4,7 +4,7 @@ import racingcar.model.Car
 import racingcar.util.ErrorMessage
 import racingcar.util.ErrorMessage.IDENTICAL_CAR_NAME
 
-class CarFactory {
+object CarFactory {
     fun ExtractCarName(input: String): List<Car> {
         val eraseBlank = input.replace(" ", "")
         require(eraseBlank.isNotBlank()) { ErrorMessage.EMPTY_CAR_NAME }
