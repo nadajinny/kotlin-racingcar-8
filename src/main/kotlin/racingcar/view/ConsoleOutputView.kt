@@ -16,7 +16,7 @@ class ConsoleOutputView: OutputView {
 
     override fun printCurrentRace(round: List<Pair<String, String>>) {
         round.forEach{
-            (name, position) -> println("$name: $position")
+            (name, position) -> println("$name : $position")
         }
         println()
     }
