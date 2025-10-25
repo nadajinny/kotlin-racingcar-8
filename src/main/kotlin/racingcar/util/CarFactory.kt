@@ -2,7 +2,6 @@ package racingcar.util
 
 import racingcar.model.Car
 import racingcar.util.ErrorMessage
-import racingcar.util.ErrorMessage.IDENTICAL_CAR_NAME
 
 object CarFactory {
     fun ExtractCarName(input: String): List<Car> {
