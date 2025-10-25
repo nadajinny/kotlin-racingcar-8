@@ -13,4 +13,6 @@ data class Car(val name: String, var distance: Int = 0) {
         val randomNumber = Randoms.pickNumberInRange(0,9)
         if (randomNumber >= 4) { distance++ }
     }
+
+    fun position(): String = "-".repeat(distance)
 }
