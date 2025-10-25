@@ -13,20 +13,17 @@ class CarFactoryTest {
 
     @Test
     fun `빈 문자열일 경우`() {
-        val cars = CarFactory.ExtractCarName("     ")
-        assertThrows<IllegalArgumentException> { ErrorMessage.EMPTY_CAR_NAME }
+        assertThrows<IllegalArgumentException> { CarFactory.ExtractCarName("     ") }
     }
 
     @Test
     fun `이름이 중복일 경우`() {
-        val cars = CarFactory.ExtractCarName("  1  , 2, 2")
-        assertThrows<IllegalArgumentException> { ErrorMessage.IDENTICAL_CAR_NAME }
+        assertThrows<IllegalArgumentException> { CarFactory.ExtractCarName("  1  , 2, 2") }
     }
 
     @Test
     fun `이름이 5글자를 초과할 경우`() {
-        val cars = CarFactory.ExtractCarName(" 123456")
-        assertThrows<IllegalArgumentException> { ErrorMessage.TOO_LONG_CAR_NAME }
+        assertThrows<IllegalArgumentException> { CarFactory.ExtractCarName(" 123456") }
     }
 
 }
