@@ -5,8 +5,8 @@ import racingcar.util.ErrorMessage
 
 data class Car(val name: String, var distance: Int = 0) {
     init {
-        require(name.isBlank()) { ErrorMessage.INVALID_CAR_NAME }
-        require(name.length > 5) { ErrorMessage.TOO_LONG_CAR_NAME }
+        require(name.isNotBlank()) { ErrorMessage.INVALID_CAR_NAME }
+        require(name.length <= 5) { ErrorMessage.TOO_LONG_CAR_NAME }
     }
 
     fun move() {
