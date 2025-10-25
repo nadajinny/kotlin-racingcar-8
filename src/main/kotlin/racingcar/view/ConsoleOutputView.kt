@@ -10,6 +10,7 @@ class ConsoleOutputView: OutputView {
     }
 
     override fun printRaceStart() {
+        println()
         println("실행 결과")
     }
 
